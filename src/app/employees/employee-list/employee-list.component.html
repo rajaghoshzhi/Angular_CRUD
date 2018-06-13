@@ -1,0 +1,29 @@
+<div>
+  <h6 class="text-center">
+    Employee Registration
+  </h6>
+  <table class="table table-striped table-bordered table-hover">
+      <tr >
+          <td>Name</td>
+          <td>Position</td>
+          <td>Office</td>
+          <td>Salary</td>
+          <td>Actions</td>
+        </tr>
+    <tr *ngFor="let empList of employeeArrList">
+      <td>{{ empList.name }}</td>
+      <td>{{ empList.position }}</td>
+      <td>{{ empList.office }}</td>
+      <td>{{ empList.salary }}</td>
+      <td>    
+        <a  class="btn" (click)="onEdit(empList)">
+            <i class="fa fa-edit"></i>
+        </a>  
+        <a  class="btn" (click)="onDelete(empList)">
+            <i class="fa fa-trash"></i>
+        </a>              
+        
+      </td>
+    </tr>
+  </table>
+</div>
